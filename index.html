@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>যোগাযোগ - Jana Online Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Digital Modern Style */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      padding: 40px 20px;
+      color: #e0e6ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .contact-container {
+      background: rgba(30, 35, 90, 0.85);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(110, 125, 255, 0.6);
+      max-width: 480px;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 35px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #b4bbff;
+      text-shadow: 0 0 8px #a1aaff;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #b4bbff;
+      text-shadow: 0 0 5px #7276ff;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 15px 18px;
+      margin-top: 8px;
+      border-radius: 12px;
+      border: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: #dbe1ff;
+      font-size: 1.05rem;
+      font-weight: 500;
+      box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.15);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      resize: vertical;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #aab5ff;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 15px #8c94ff;
+      color: #fff;
+    }
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 16px 0;
+      border-radius: 15px;
+      border: none;
+      background: linear-gradient(45deg, #6a79f7, #aab5ff);
+      color: #0b0f42;
+      font-size: 1.3rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(102, 119, 255, 0.8);
+      transition: background 0.4s ease, color 0.3s ease, box-shadow 0.4s ease;
+      text-shadow: 0 0 5px #5c65f4;
+    }
+    button:hover {
+      background: linear-gradient(45deg, #aab5ff, #6a79f7);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(170, 181, 255, 0.9);
+    }
+    @media (max-width: 500px) {
+      .contact-container {
+        padding: 30px 20px;
+      }
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <h2>যোগাযোগ করুন</h2>
+    <form action="send_mail.php" method="post" id="contactForm">
+      <label for="name">নাম</label>
+      <input type="text" id="name" name="name" placeholder="আপনার নাম লিখুন" required />
+
+      <label for="email">ইমেইল</label>
+      <input type="email" id="email" name="email" placeholder="আপনার ইমেইল লিখুন" required />
+
+      <label for="phone">ফোন নম্বর</label>
+      <input type="tel" id="phone" name="phone" placeholder="১১ সংখ্যার ফোন নম্বর লিখুন" pattern="[0-9]{11}" title="১১ সংখ্যার ফোন নম্বর লিখুন" required />
+
+      <label for="message">মেসেজ</label>
+      <textarea id="message" name="message" rows="5" placeholder="আপনার মেসেজ লিখুন" required></textarea>
+
+      <button type="submit">পাঠান</button>
+    </form>
+  </div>
+</body>
+</html>
