@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive Meta Tag -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,9 +12,9 @@
       background: #f7f7f7;
     }
     .contact-container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 30px auto;
+      width: 95%;
+      max-width: 1100px;
+      margin: 20px auto;
       background: #fff;
       padding: 20px;
       border-radius: 12px;
@@ -23,6 +24,7 @@
       text-align: center;
       color: #333;
       margin-bottom: 20px;
+      font-size: 1.8rem;
     }
     .row {
       display: flex;
@@ -36,10 +38,12 @@
     .contact-info h3 {
       color: #444;
       margin-bottom: 10px;
+      font-size: 1.2rem;
     }
     .contact-info p {
       margin: 8px 0;
       color: #555;
+      font-size: 0.95rem;
     }
     .contact-info p span {
       font-weight: bold;
@@ -47,11 +51,11 @@
     }
     form input, form textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 8px;
-      font-size: 14px;
+      font-size: 15px;
     }
     form button {
       background: #007BFF;
@@ -61,6 +65,7 @@
       border-radius: 8px;
       font-size: 16px;
       cursor: pointer;
+      width: 100%;
     }
     form button:hover {
       background: #0056b3;
@@ -74,6 +79,35 @@
       border: none;
       border-radius: 12px;
     }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .contact-info, .contact-form {
+        min-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-container {
+        padding: 15px;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      form input, form textarea {
+        font-size: 14px;
+        padding: 10px;
+      }
+      form button {
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -86,7 +120,7 @@
       <div class="contact-info">
         <h3>Our Office</h3>
         <p><span>Address:</span> Kakdwip, West Bengal, India</p>
-        <p><span>Phone:</span> +91 9907992247/ 6297726894</p>
+        <p><span>Phone:</span> +91 9907992247 / 6297726894</p>
         <p><span>Email:</span> janaonlineservice4@gmail.com</p>
       </div>
 
@@ -106,7 +140,7 @@
       <h3>Find Us on Map</h3>
       <iframe 
         src="https://www.google.com/maps?q=Jana+Online+Service+Kakdwip&output=embed" 
-        allowfullscreen="" 
+        allowfullscreen 
         loading="lazy">
       </iframe>
     </div>
