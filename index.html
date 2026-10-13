@@ -1,1070 +1,1092 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>Contact | Jana Online Service</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071b35">
+<meta name="description" content="Jana Online Service - Official Contact, Digital Support and Social Media">
+<title>Contact & Support | Jana Online Service</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,"Noto Sans Bengali",sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --primary:#0097a7;
-  --primary2:#006b78;
-  --navy:#062f3d;
-  --green:#16a765;
-  --light:#f2fafb;
-  --white:#fff;
-  --text:#18343d;
-  --muted:#70838a;
-  --border:#dcecef;
-  --shadow:0 12px 35px rgba(0,70,80,.12);
+ --bg:#f3f7ff;
+ --white:#fff;
+ --navy:#071b35;
+ --text:#20334d;
+ --muted:#738198;
+ --border:#e3eaf5;
+ --cyan:#00d5d9;
+ --teal:#008caa;
+ --blue:#4361ee;
+ --purple:#8657ff;
+ --green:#12b981;
+ --shadow:0 12px 35px rgba(22,48,92,.09);
 }
-
+html{scroll-behavior:smooth}
 body{
-  background:#eef7f9;
-  color:var(--text);
+ font-family:Arial,"Noto Sans Bengali",sans-serif;
+ background:var(--bg);
+ color:var(--text);
+ overflow-x:hidden;
+}
+a,button{-webkit-tap-highlight-color:transparent}
+button{font-family:inherit}
+a:focus-visible,button:focus-visible{
+ outline:3px solid #00bcd4;outline-offset:3px
 }
 
-/* ================= TOP HEADER ================= */
-
+/* HEADER */
 .header{
-  background:linear-gradient(135deg,#052d3a,#007d8c,#00a3b3);
-  color:#fff;
-  padding:16px;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 5px 20px rgba(0,0,0,.18);
+ position:sticky;top:0;z-index:1000;
+ background:rgba(7,27,53,.96);
+ backdrop-filter:blur(16px);
+ color:white;border-bottom:1px solid #ffffff16;
 }
-
 .header-inner{
-  max-width:950px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  gap:12px;
+ max-width:1000px;margin:auto;padding:12px 16px;
+ display:flex;align-items:center;gap:12px
 }
-
-.back{
-  width:42px;
-  height:42px;
-  border:0;
-  border-radius:13px;
-  background:rgba(255,255,255,.13);
-  color:white;
-  font-size:25px;
-  cursor:pointer;
+.head-btn{
+ width:42px;height:42px;flex-shrink:0;
+ display:grid;place-items:center;border:1px solid #ffffff22;
+ border-radius:14px;background:#ffffff12;color:white;
+ font-size:23px;cursor:pointer;transition:.25s
 }
-
-.header-title{
-  flex:1;
+.head-btn:hover{background:#00cbd2;color:#062039;transform:translateY(-2px)}
+.brand-mark{
+ width:43px;height:43px;flex-shrink:0;
+ display:grid;place-items:center;border-radius:14px;
+ color:#062039;font-size:19px;font-weight:900;
+ background:linear-gradient(135deg,#00f0dc,#4e91ff);
+ box-shadow:0 0 22px #00d5d944
 }
+.header-title{flex:1;min-width:0}
+.header-title h1{font-size:17px;font-weight:800}
+.header-title p{font-size:10px;color:#b7cce1;margin-top:3px}
 
-.header-title h1{
-  font-size:19px;
-  font-weight:800;
+/* HERO */
+.hero{
+ position:relative;overflow:hidden;
+ background:linear-gradient(135deg,#071b35 0%,#093b64 48%,#087c91 100%);
+ color:white;padding:32px 16px 70px;text-align:center;
 }
-
-.header-title p{
-  font-size:11px;
-  opacity:.8;
-  margin-top:3px;
+.hero:before,.hero:after{
+ content:"";position:absolute;border-radius:50%;pointer-events:none;
+ filter:blur(1px);animation:float 8s ease-in-out infinite alternate
 }
-
-.share{
-  width:42px;
-  height:42px;
-  border:0;
-  border-radius:13px;
-  background:rgba(255,255,255,.13);
-  color:white;
-  font-size:20px;
-  cursor:pointer;
+.hero:before{
+ width:240px;height:240px;top:-135px;left:-70px;
+ background:radial-gradient(circle,#12d9d955,transparent 70%)
 }
-
-/* ================= PROFILE ================= */
-
-.profile{
-  max-width:950px;
-  margin:auto;
-  padding:30px 16px 18px;
-  text-align:center;
+.hero:after{
+ width:300px;height:300px;right:-150px;bottom:-140px;
+ background:radial-gradient(circle,#805cff66,transparent 70%);
+ animation-delay:-3s
 }
-
+.hero-inner{position:relative;z-index:1;max-width:850px;margin:auto}
+.eyebrow{
+ display:inline-flex;align-items:center;gap:8px;
+ padding:8px 13px;border:1px solid #ffffff27;
+ background:#ffffff0d;border-radius:30px;
+ font-size:10px;letter-spacing:.7px;color:#d6fbff
+}
+.live-dot{
+ width:8px;height:8px;border-radius:50%;
+ background:#2fffb0;box-shadow:0 0 12px #2fffb0;
+ animation:pulse 1.7s infinite
+}
 .profile-photo{
-  width:115px;
-  height:115px;
-  border-radius:50%;
-  object-fit:cover;
-  border:5px solid white;
-  box-shadow:0 10px 30px rgba(0,100,110,.25);
-  background:#dceff2;
+ display:block;width:112px;height:112px;object-fit:cover;
+ border-radius:50%;margin:22px auto 12px;
+ border:4px solid #ffffff;background:#cce9f3;
+ box-shadow:0 0 0 7px #ffffff16,0 0 35px #00d5d966
+}
+.hero h2{font-size:29px;font-weight:900;letter-spacing:-.6px}
+.hero-business{
+ margin-top:7px;font-size:15px;font-weight:800;
+ background:linear-gradient(90deg,#76fff0,#8bbaff,#d9a8ff);
+ background-clip:text;-webkit-background-clip:text;color:transparent
+}
+.hero-description{
+ max-width:570px;margin:12px auto 0;
+ color:#d1dfef;font-size:13px;line-height:1.9
+}
+.hero-tags{
+ display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px
+}
+.hero-tag{
+ border:1px solid #ffffff20;background:#ffffff0d;
+ border-radius:30px;padding:7px 11px;font-size:10px;color:#e0f6ff
+}
+.hero-tag span{margin-right:4px}
+
+/* MAIN CONTENT */
+.main{
+ position:relative;z-index:2;max-width:1000px;
+ margin:-37px auto 0;padding:0 16px 35px
+}
+.quick-grid{
+ display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px
+}
+.quick{
+ --accent:#00a6b9;
+ display:flex;flex-direction:column;align-items:center;
+ text-decoration:none;color:var(--text);
+ background:white;border:1px solid #ffffff;
+ border-radius:20px;padding:17px 7px 15px;
+ box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;
+ min-width:0
+}
+.quick:nth-child(2){--accent:#18b981}
+.quick:nth-child(3){--accent:#8b5cf6}
+.quick:nth-child(4){--accent:#3478f6}
+.quick:hover{transform:translateY(-5px);box-shadow:0 16px 35px #183f7720}
+.quick-icon{
+ width:47px;height:47px;display:grid;place-items:center;
+ border-radius:16px;background:color-mix(in srgb,var(--accent) 12%,white);
+ color:var(--accent);font-size:23px;
+ transition:transform .25s
+}
+.quick:hover .quick-icon{transform:rotate(-6deg) scale(1.08)}
+.quick strong{font-size:12px;margin-top:10px}
+.quick small{font-size:10px;color:var(--muted);margin-top:4px}
+
+/* SECTION HEADING */
+.section-heading{margin:30px 0 15px}
+.section-heading h2{font-size:20px;color:var(--navy);font-weight:900}
+.section-heading p{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.7}
+.heading-line{
+ width:55px;height:4px;border-radius:10px;
+ margin-top:10px;background:linear-gradient(90deg,#00cbd2,#795bff)
 }
 
-.verified{
-  display:inline-flex;
-  align-items:center;
-  gap:5px;
-  margin-top:12px;
-  padding:5px 11px;
-  border-radius:30px;
-  background:#e5f8ed;
-  color:#10814e;
-  font-size:11px;
-  font-weight:bold;
-}
-
-.profile h2{
-  margin-top:10px;
-  font-size:25px;
-  color:var(--navy);
-}
-
-.profile .business{
-  margin-top:4px;
-  color:var(--primary2);
-  font-size:15px;
-  font-weight:bold;
-}
-
-.profile .tagline{
-  margin:8px auto 0;
-  max-width:600px;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.6;
-}
-
-/* ================= QUICK ACTION ================= */
-
-.actions{
-  max-width:950px;
-  margin:auto;
-  padding:0 16px 12px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-}
-
-.action{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:17px;
-  padding:15px 7px;
-  text-align:center;
-  text-decoration:none;
-  color:var(--text);
-  box-shadow:var(--shadow);
-  transition:.2s;
-}
-
-.action:active{
-  transform:scale(.96);
-}
-
-.action-icon{
-  width:45px;
-  height:45px;
-  margin:auto;
-  border-radius:14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:22px;
-  background:#e8f8fa;
-}
-
-.action strong{
-  display:block;
-  margin-top:8px;
-  font-size:12px;
-}
-
-.action small{
-  color:var(--muted);
-  font-size:9px;
-}
-
-/* ================= MAIN ================= */
-
-.container{
-  max-width:950px;
-  margin:auto;
-  padding:8px 16px 40px;
-}
-
+/* CARDS */
 .card{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:22px;
-  padding:20px;
-  margin-top:14px;
-  box-shadow:var(--shadow);
+ background:white;border:1px solid var(--border);
+ border-radius:22px;padding:20px;box-shadow:var(--shadow);
+ min-width:0
 }
-
-.card-title{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  font-size:18px;
-  font-weight:800;
-  color:var(--navy);
-  margin-bottom:15px;
+.card-heading{
+ display:flex;align-items:center;gap:11px;
+ font-size:16px;font-weight:900;color:var(--navy);margin-bottom:13px
 }
-
-.card-title span{
-  width:38px;
-  height:38px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#e7f8fa;
-  border-radius:12px;
+.card-icon{
+ width:42px;height:42px;flex-shrink:0;border-radius:14px;
+ display:grid;place-items:center;font-size:20px;
+ background:linear-gradient(135deg,#e2ffff,#e8edff)
 }
-
-/* ================= CONTACT INFORMATION ================= */
-
-.info{
-  display:flex;
-  align-items:center;
-  gap:13px;
-  padding:13px 0;
-  border-bottom:1px solid #edf3f4;
+.contact-row{
+ display:flex;align-items:center;gap:12px;
+ padding:13px 0;border-bottom:1px solid #edf1f7
 }
-
-.info:last-child{
-  border-bottom:0;
+.contact-row:last-child{border-bottom:0;padding-bottom:0}
+.contact-icon{
+ width:42px;height:42px;flex-shrink:0;
+ display:grid;place-items:center;border-radius:14px;
+ background:#f0f7ff;font-size:19px
 }
-
-.info-icon{
-  width:43px;
-  height:43px;
-  border-radius:13px;
-  background:#edf8f9;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:20px;
+.contact-data{flex:1;min-width:0}
+.contact-data label{display:block;font-size:10px;color:var(--muted);margin-bottom:4px}
+.contact-data b{font-size:12px;overflow-wrap:anywhere;color:var(--text)}
+.small-btn{
+ flex-shrink:0;border:0;border-radius:10px;
+ background:#e8f8fa;color:#00798b;
+ padding:9px 11px;font-size:10px;font-weight:800;
+ cursor:pointer;text-decoration:none
 }
+.small-btn:hover{background:#c8f5f6}
 
-.info-content{
-  flex:1;
+/* GROUP BANNER */
+.group-banner{
+ position:relative;overflow:hidden;
+ border-radius:23px;padding:23px;
+ color:white;background:linear-gradient(125deg,#075d60,#087eaa,#5852cb);
+ box-shadow:0 14px 35px #126b9c26
 }
-
-.info-content label{
-  display:block;
-  font-size:10px;
-  color:var(--muted);
-  margin-bottom:3px;
+.group-banner:after{
+ content:"";position:absolute;width:180px;height:180px;
+ right:-75px;top:-90px;border-radius:50%;
+ background:#ffffff13
 }
-
-.info-content b{
-  font-size:13px;
-  word-break:break-word;
+.group-top{display:flex;align-items:center;gap:14px;position:relative;z-index:1}
+.group-symbol{
+ width:55px;height:55px;flex-shrink:0;display:grid;place-items:center;
+ border-radius:17px;background:#ffffff22;font-size:27px;
+ border:1px solid #ffffff20
 }
-
-.mini-btn{
-  border:0;
-  border-radius:10px;
-  padding:8px 10px;
-  background:#e8f7f8;
-  color:var(--primary2);
-  font-size:11px;
-  font-weight:bold;
-  cursor:pointer;
+.group-banner h3{font-size:17px}
+.group-banner p{font-size:12px;color:#e1f6ff;line-height:1.8;margin-top:6px}
+.white-btn{
+ display:block;position:relative;z-index:1;
+ margin-top:18px;padding:13px;text-align:center;
+ background:white;color:#08677b;border-radius:13px;
+ font-size:12px;font-weight:900;text-decoration:none;transition:.2s
 }
+.white-btn:hover{transform:translateY(-2px);box-shadow:0 7px 20px #001a3033}
 
-/* ================= JOIN GROUP ================= */
-
-.group{
-  background:linear-gradient(135deg,#06323f,#007987,#00a4b4);
-  color:white;
-  border-radius:22px;
-  padding:22px;
-  margin-top:14px;
-  box-shadow:0 15px 35px rgba(0,100,115,.22);
+/* SOCIAL MEDIA */
+.social-area{margin-top:31px}
+.social-heading{text-align:center;margin-bottom:19px}
+.social-heading .mini-title{
+ color:#008caa;font-size:10px;font-weight:900;letter-spacing:2px
 }
-
-.group-content{
-  display:flex;
-  align-items:center;
-  gap:15px;
+.social-heading h2{font-size:25px;color:var(--navy);margin-top:7px}
+.social-heading p{font-size:12px;color:var(--muted);margin-top:7px;line-height:1.8}
+.social-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.social-card{
+ position:relative;overflow:hidden;min-width:0;
+ border-radius:24px;background:white;
+ border:1px solid var(--border);box-shadow:var(--shadow);
+ padding:21px;transition:transform .3s,box-shadow .3s
 }
-
-.group-icon{
-  width:57px;
-  height:57px;
-  flex-shrink:0;
-  border-radius:17px;
-  background:rgba(255,255,255,.15);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:29px;
+.social-card:hover{transform:translateY(-5px);box-shadow:0 20px 42px #132f681c}
+.social-card:before{
+ content:"";position:absolute;top:0;left:0;width:100%;height:5px
 }
-
-.group h3{
-  font-size:17px;
+.youtube-card:before{background:linear-gradient(90deg,#ff3434,#ff8b4b)}
+.facebook-card:before{background:linear-gradient(90deg,#1684ff,#8c60ff)}
+.social-top{display:flex;align-items:center;gap:13px}
+.social-logo{
+ width:58px;height:58px;flex-shrink:0;display:grid;place-items:center;
+ border-radius:18px;color:white;font-size:27px;font-weight:900;
+ box-shadow:0 8px 18px #00000014
 }
-
-.group p{
-  margin-top:5px;
-  font-size:12px;
-  line-height:1.5;
-  opacity:.88;
+.youtube-logo{background:linear-gradient(135deg,#ff4848,#ce0000)}
+.facebook-logo{background:linear-gradient(135deg,#4e9bff,#0866ff)}
+.social-name{min-width:0}
+.social-name h3{font-size:15px;color:var(--navy)}
+.social-name span{display:block;margin-top:5px;color:var(--muted);font-size:10px;overflow-wrap:anywhere}
+.social-description{font-size:12px;line-height:1.9;color:var(--muted);margin:16px 0;min-height:67px}
+.social-btn{
+ display:flex;align-items:center;justify-content:center;gap:8px;
+ padding:13px 8px;border-radius:13px;text-decoration:none;
+ color:white;font-size:11px;font-weight:900;transition:.25s
 }
+.social-btn:hover{filter:brightness(1.08);transform:scale(1.015)}
+.youtube-btn{background:linear-gradient(100deg,#ff4141,#d50000);box-shadow:0 6px 16px #e6211726}
+.facebook-btn{background:linear-gradient(100deg,#398dff,#4b55ec);box-shadow:0 6px 16px #0866ff26}
+.social-note{text-align:center;color:var(--muted);font-size:11px;margin-top:15px}
 
-.join-btn{
-  display:block;
-  text-align:center;
-  margin-top:17px;
-  padding:13px;
-  background:white;
-  color:#006978;
-  border-radius:13px;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:13px;
-}
-
-/* ================= QR ================= */
-
-.qr-section{
-  text-align:center;
-}
-
+/* QR */
+.qr-card{text-align:center;margin-top:16px}
+.qr-card .card-heading{justify-content:center}
 .qr-box{
-  display:inline-block;
-  padding:13px;
-  background:white;
-  border-radius:18px;
-  border:1px solid var(--border);
-  box-shadow:0 7px 20px rgba(0,0,0,.08);
+ display:inline-block;padding:12px;background:white;
+ border:1px solid var(--border);border-radius:18px
+}
+#qrcode{width:190px;height:190px;display:flex;align-items:center;justify-content:center}
+#qrcode canvas,#qrcode img{max-width:100%;height:auto}
+.qr-card h3{font-size:15px;margin-top:13px;color:var(--navy)}
+.qr-card p{font-size:11px;line-height:1.8;color:var(--muted);margin-top:5px}
+.primary-btn{
+ margin-top:13px;padding:12px 18px;border:0;border-radius:12px;
+ background:linear-gradient(100deg,#00a9b8,#4263e9);
+ color:white;font-size:11px;font-weight:900;cursor:pointer;
+ box-shadow:0 7px 18px #007d9b2b
 }
 
-#qrcode{
-  width:190px;
-  height:190px;
+/* OFFICE */
+.office-box{
+ padding:16px;border-radius:17px;
+ border:1px solid var(--border);
+ background:linear-gradient(135deg,#f5fcff,#f7f6ff)
 }
-
-.qr-section h3{
-  margin-top:13px;
-  font-size:15px;
-}
-
-.qr-section p{
-  color:var(--muted);
-  font-size:11px;
-  margin-top:5px;
-}
-
-.qr-btn{
-  margin-top:13px;
-  border:0;
-  padding:11px 18px;
-  border-radius:12px;
-  background:var(--primary);
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-/* ================= OFFICE ================= */
-
-.office{
-  background:#f7fbfc;
-  border:1px solid var(--border);
-  border-radius:17px;
-  padding:16px;
-}
-
-.office h3{
-  font-size:15px;
-  margin-bottom:7px;
-}
-
-.office p{
-  font-size:12px;
-  color:var(--muted);
-  line-height:1.8;
-}
-
+.office-box h3{font-size:15px;color:var(--navy)}
+.office-box p{font-size:12px;line-height:2;color:var(--muted);margin-top:7px}
 .map-btn{
-  display:block;
-  text-align:center;
-  background:var(--navy);
-  color:white;
-  text-decoration:none;
-  padding:12px;
-  border-radius:12px;
-  margin-top:13px;
-  font-size:12px;
-  font-weight:bold;
+ display:block;text-align:center;margin-top:13px;padding:12px;
+ background:var(--navy);color:white;text-decoration:none;
+ border-radius:12px;font-size:11px;font-weight:900
 }
 
-/* ================= SHARE ================= */
-
-.share-card{
-  text-align:center;
+/* FOOTER */
+.footer{
+ background:linear-gradient(135deg,#071b35,#0a3e5d);
+ color:white;text-align:center;padding:28px 16px 24px;
+ margin-top:5px
 }
-
-.share-card p{
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.6;
+.footer-logo{
+ width:43px;height:43px;margin:0 auto 10px;border-radius:14px;
+ display:grid;place-items:center;font-size:18px;font-weight:900;
+ color:#062039;background:linear-gradient(135deg,#00f0dc,#6194ff)
 }
+.footer h3{font-size:16px}
+.footer p{font-size:11px;line-height:2;color:#c0d2e7;margin-top:6px}
+.footer .copyright{margin-top:13px;padding-top:13px;border-top:1px solid #ffffff1c;color:#8faac4;font-size:10px}
 
-.big-share{
-  margin-top:13px;
-  width:100%;
-  padding:13px;
-  border:0;
-  border-radius:13px;
-  background:linear-gradient(135deg,#0097a7,#006978);
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-  text-align:center;
-  padding:22px 15px 35px;
-  color:#73868c;
-  font-size:11px;
-  line-height:1.8;
-}
-
-footer b{
-  color:var(--primary2);
-}
-
-/* ================= TOAST ================= */
-
+/* TOAST */
 .toast{
+ position:fixed;z-index:5000;left:50%;bottom:22px;
+ transform:translate(-50%,100px);opacity:0;
+ background:#071b35;color:white;border:1px solid #ffffff24;
+ border-radius:13px;padding:12px 17px;font-size:12px;
+ box-shadow:0 12px 35px #0003;transition:.3s;
+ max-width:90%;text-align:center;pointer-events:none
+}
+.toast.show{transform:translate(-50%,0);opacity:1}
+
+/* ANIMATION */
+@keyframes pulse{
+ 0%,100%{box-shadow:0 0 0 0 #2fffb044}
+ 50%{box-shadow:0 0 0 7px #2fffb000}
+}
+@keyframes float{
+ from{transform:translate(0,0)}
+ to{transform:translate(20px,18px)}
+}
+
+/* RESPONSIVE */
+@media(min-width:720px){
+ .content-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+ .content-grid>.card,.content-grid>.group-banner{margin-top:16px}
+ .span-all{grid-column:1/-1}
+ .hero{padding-top:39px}
+}
+@media(max-width:520px){
+ .header-inner{padding:10px 12px;gap:9px}
+ .header-title h1{font-size:15px}
+ .brand-mark{width:39px;height:39px}
+ .head-btn{width:38px;height:38px}
+ .hero{padding:27px 14px 62px}
+ .profile-photo{width:100px;height:100px}
+ .hero h2{font-size:25px}
+ .hero-description{font-size:12px}
+ .main{padding-left:12px;padding-right:12px}
+ .quick-grid{gap:7px}
+ .quick{padding:13px 3px;border-radius:16px}
+ .quick-icon{width:39px;height:39px;font-size:20px;border-radius:13px}
+ .quick strong{font-size:10px}
+ .quick small{display:none}
+ .section-heading{margin-top:25px}
+ .section-heading h2{font-size:18px}
+ .card{padding:15px;border-radius:18px}
+ .group-banner{padding:17px;border-radius:19px}
+ .social-grid{gap:9px}
+ .social-card{padding:13px;border-radius:18px}
+ .social-top{align-items:flex-start;gap:9px}
+ .social-logo{width:42px;height:42px;font-size:21px;border-radius:13px}
+ .social-name h3{font-size:12px}
+ .social-name span{font-size:9px;line-height:1.5}
+ .social-description{font-size:11px;min-height:105px;margin:13px 0}
+ .social-btn{font-size:9px;padding:12px 4px;gap:4px}
+ .social-heading h2{font-size:22px}
+ .contact-row{gap:8px}
+ .contact-icon{width:37px;height:37px;font-size:17px}
+ .contact-data b{font-size:11px}
+ .small-btn{padding:8px;font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+/* ===== INTEGRATED ANIMATED DIGITAL BACKGROUND ===== */
+html { min-height:100%; background:#061322; }
+body { background:transparent !important; }
+#digital-network-bg {
   position:fixed;
-  bottom:25px;
-  left:50%;
-  transform:translate(-50%,120px);
-  background:#102f39;
-  color:white;
-  padding:13px 18px;
-  border-radius:13px;
-  font-size:12px;
-  z-index:5000;
-  transition:.3s;
-  box-shadow:0 10px 30px rgba(0,0,0,.25);
-  white-space:nowrap;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  z-index:-1;
+  pointer-events:none;
+  background:transparent;
+}
+body::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse at 15% 20%,rgba(0,191,166,.18),transparent 42%),
+    radial-gradient(ellipse at 85% 75%,rgba(39,130,239,.16),transparent 40%),
+    linear-gradient(135deg,#061322 0%,#071d2d 50%,#04151f 100%);
+}
+/* Let the animated network show through the hero while keeping text readable */
+.hero {
+  background:linear-gradient(135deg,rgba(7,27,53,.83),rgba(9,59,100,.72) 48%,rgba(8,124,145,.70)) !important;
+  border-bottom:1px solid rgba(39,231,239,.12);
+}
+.header {
+  background:rgba(7,27,53,.91) !important;
+}
+.footer {
+  background:linear-gradient(135deg,rgba(7,27,53,.94),rgba(10,62,93,.91)) !important;
 }
 
-.toast.show{
-  transform:translate(-50%,0);
-}
-
-/* ================= DESKTOP ================= */
-
-@media(min-width:700px){
-
-  .profile{
-    padding-top:45px;
-  }
-
-  .container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0 15px;
-  }
-
-  .container .card,
-  .container .group{
-    margin-top:15px;
-  }
-
-  .full{
-    grid-column:1/-1;
-  }
-
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:500px){
-
-  .actions{
-    grid-template-columns:repeat(4,1fr);
-    gap:7px;
-  }
-
-  .action{
-    padding:12px 3px;
-  }
-
-  .action-icon{
-    width:39px;
-    height:39px;
-    font-size:19px;
-  }
-
-  .action strong{
-    font-size:10px;
-  }
-
-  .action small{
-    display:none;
-  }
-
-}
 </style>
 </head>
 
 <body>
-
-
-<!-- HEADER -->
+<canvas id="digital-network-bg" aria-hidden="true"></canvas>
 
 <header class="header">
-
-  <div class="header-inner">
-
-    <button class="back" onclick="goBack()">‹</button>
-
-    <div class="header-title">
-      <h1>Contact & Support</h1>
-      <p>Jana Online Service</p>
-    </div>
-
-    <button class="share" onclick="sharePage()">↗</button>
-
+ <div class="header-inner">
+  <button class="head-btn" onclick="goBack()" aria-label="Go back">‹</button>
+  <div class="brand-mark">JOS</div>
+  <div class="header-title">
+   <h1>Contact &amp; Support</h1>
+   <p>Jana Online Service · Official Page</p>
   </div>
-
+  <button class="head-btn" onclick="sharePage()" aria-label="Share page">↗</button>
+ </div>
 </header>
 
+<section class="hero">
+ <div class="hero-inner">
+  <div class="eyebrow"><span class="live-dot"></span> OFFICIAL CONTACT PROFILE</div>
 
-<!-- PROFILE -->
+  <img class="profile-photo"
+   src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmH8kRyBGmldiQsuQXhUHGlZq01Lqca-VZG_YL1WiGTYb3p7a0X8eG0l4cnbN_9thfSLoeb3DHDzbwro6fx2cLYmO7_gyA8A9tnJ0xrKrzXY3Zu3wdBRFl23LdpqORlm08KpQIFCzdkZ8xx=s680-w680-h510-rw"
+   alt="Suman Jana"
+   onerror="this.onerror=null;this.src='https://via.placeholder.com/112?text=SJ'">
 
-<section class="profile">
+  <h2>Mr. Suman Jana</h2>
+  <div class="hero-business">Jana Online Service (JOS)</div>
 
-  <!-- নিজের ছবি এখানে রাখুন: profile.jpg -->
-
-  <img
-    class="profile-photo"
-    src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmH8kRyBGmldiQsuQXhUHGlZq01Lqca-VZG_YL1WiGTYb3p7a0X8eG0l4cnbN_9thfSLoeb3DHDzbwro6fx2cLYmO7_gyA8A9tnJ0xrKrzXY3Zu3wdBRFl23LdpqORlm08KpQIFCzdkZ8xx=s680-w680-h510-rw"
-    alt="Suman Jana"
-    onerror="this.src='https://via.placeholder.com/115?text=SJ';"
-  >
-
-  <div class="verified">
-    ✓ Official Contact
-  </div>
-
-  <h2>Mr.Suman Jana</h2>
-
-  <div class="business">
-    Jana Online Service
-  </div>
-
-  <p class="tagline">
-    আপনার Online কাজ, Digital Service ও Computer Related
-    প্রয়োজনের জন্য আমাদের সাথে যোগাযোগ করুন।
+  <p class="hero-description">
+   আপনার Digital Journey-তে আমরা পাশে আছি।
+   Online Service, প্রয়োজনীয় Digital Tools এবং
+   Computer Related কাজের জন্য যোগাযোগ করুন।
   </p>
 
+  <div class="hero-tags">
+   <span class="hero-tag">✦ Digital Service</span>
+   <span class="hero-tag">✓ Customer Support</span>
+   <span class="hero-tag">⌘ Online Solutions</span>
+  </div>
+ </div>
 </section>
 
+<main class="main">
 
-<!-- QUICK ACTIONS -->
-
-<section class="actions">
-
-  <a class="action" href="tel:+919907992247">
-    <div class="action-icon">📞</div>
-    <strong>Call</strong>
-    <small>Direct Call</small>
+ <section class="quick-grid" aria-label="Quick contact">
+  <a class="quick" href="tel:+919907992247">
+   <div class="quick-icon">☎</div>
+   <strong>Call Now</strong><small>Direct Contact</small>
   </a>
-
-
-  <a class="action"
-     href="https://wa.me/919907992247?text=Hello%20Jana%20Online%20Service"
-     target="_blank">
-
-    <div class="action-icon">💬</div>
-    <strong>WhatsApp</strong>
-    <small>Chat Now</small>
-
+  <a class="quick" href="https://wa.me/919907992247?text=Hello%20Jana%20Online%20Service" target="_blank" rel="noopener noreferrer">
+   <div class="quick-icon">◉</div>
+   <strong>WhatsApp</strong><small>Send Message</small>
   </a>
-
-
-  <a class="action"
-     href="mailto:janaonlineservice4@gmail.com">
-
-    <div class="action-icon">✉️</div>
-    <strong>Email</strong>
-    <small>Send Mail</small>
-
+  <a class="quick" href="mailto:janaonlineservice4@gmail.com">
+   <div class="quick-icon">✉</div>
+   <strong>Email Us</strong><small>Write to Us</small>
   </a>
-
-
-  <a class="action"
-     href="https://chat.whatsapp.com/Ig2WBwQIadm5JFUC8QBrjY"
-     target="_blank">
-
-    <div class="action-icon">👥</div>
-    <strong>Join Group</strong>
-    <small>Join Now</small>
-
+  <a class="quick" href="https://chat.whatsapp.com/Ig2WBwQIadm5JFUC8QBrjY" target="_blank" rel="noopener noreferrer">
+   <div class="quick-icon">♧</div>
+   <strong>Join Group</strong><small>Stay Connected</small>
   </a>
+ </section>
 
-</section>
+ <div class="section-heading">
+  <h2>Let's Get In Touch 👋</h2>
+  <p>আপনার প্রয়োজনীয় যোগাযোগের তথ্য এক জায়গায়।</p>
+  <div class="heading-line"></div>
+ </div>
 
-
-<main class="container">
-
-
-  <!-- CONTACT INFORMATION -->
+ <div class="content-grid">
 
   <section class="card">
+   <div class="card-heading"><div class="card-icon">📇</div>Contact Information</div>
 
-    <div class="card-title">
-      <span>📇</span>
-      Contact Information
+   <div class="contact-row">
+    <div class="contact-icon">📱</div>
+    <div class="contact-data">
+     <label>Mobile Number</label>
+     <b>+91 9907992247</b>
     </div>
+    <button class="small-btn" onclick="copyText('+919907992247')">COPY</button>
+   </div>
 
-
-    <div class="info">
-
-      <div class="info-icon">📱</div>
-
-      <div class="info-content">
-
-        <label>Mobile Number</label>
-
-        <b>+91 9907992247</b>
-
-      </div>
-
-      <button class="mini-btn"
-              onclick="copyText('+919907992247')">
-
-        Copy
-
-      </button>
-
+   <div class="contact-row">
+    <div class="contact-icon">💬</div>
+    <div class="contact-data">
+     <label>WhatsApp Number</label>
+     <b>+91 9907992247</b>
     </div>
+    <a class="small-btn" href="https://wa.me/919907992247" target="_blank" rel="noopener noreferrer">OPEN</a>
+   </div>
 
-
-    <div class="info">
-
-      <div class="info-icon">💬</div>
-
-      <div class="info-content">
-
-        <label>WhatsApp</label>
-
-        <b>+91 9907992247</b>
-
-      </div>
-
-      <a
-        class="mini-btn"
-        style="text-decoration:none"
-        href="https://chat.whatsapp.com/Ig2WBwQIadm5JFUC8QBrjY"
-        target="_blank">
-
-        Open
-
-      </a>
-
+   <div class="contact-row">
+    <div class="contact-icon">✉️</div>
+    <div class="contact-data">
+     <label>Email Address</label>
+     <b>janaonlineservice4@gmail.com</b>
     </div>
-
-
-    <div class="info">
-
-      <div class="info-icon">✉️</div>
-
-      <div class="info-content">
-
-        <label>Email Address</label>
-
-        <b>janaonlineservice4@gmail.com</b>
-
-      </div>
-
-      <button
-        class="mini-btn"
-        onclick="copyText('janaonlineservice4@gmail.com')">
-
-        Copy
-
-      </button>
-
-    </div>
-
+    <button class="small-btn" onclick="copyText('janaonlineservice4@gmail.com')">COPY</button>
+   </div>
   </section>
 
-
-  <!-- JOIN GROUP -->
-
-  <section class="group full">
-
-    <div class="group-content">
-
-      <div class="group-icon">
-        👥
-      </div>
-
-      <div>
-
-        <h3>Jana Online Service Group</h3>
-
-        <p>
-          নতুন Service, Online Work, গুরুত্বপূর্ণ Update
-          এবং প্রয়োজনীয় তথ্য পেতে আমাদের Group-এ Join করুন।
-        </p>
-
-      </div>
-
+  <section class="group-banner">
+   <div class="group-top">
+    <div class="group-symbol">👥</div>
+    <div>
+     <h3>Join Our Community</h3>
+     <p>নতুন Update, প্রয়োজনীয় তথ্য এবং গুরুত্বপূর্ণ খবর পেতে আমাদের WhatsApp Group-এ যুক্ত থাকুন।</p>
     </div>
+   </div>
+   <a class="white-btn" href="https://chat.whatsapp.com/Ig2WBwQIadm5JFUC8QBrjY" target="_blank" rel="noopener noreferrer">
+    JOIN WHATSAPP GROUP &nbsp; ↗
+   </a>
+  </section>
 
-
-    <!-- এখানে আপনার আসল WhatsApp/Telegram/FB Group link বসাবেন -->
-
-    <a
-      class="join-btn"
-      href="https://wa.me/919907992247"
-      target="_blank">
-
-      👥 JOIN GROUP NOW
-
+  <section class="card">
+   <div class="card-heading"><div class="card-icon">📍</div>Office Location</div>
+   <div class="office-box">
+    <h3>Jana Online Service (JOS)</h3>
+    <p>
+     Kakdwip, South 24 Parganas<br>
+     West Bengal - 743347<br>
+     India
+    </p>
+    <a class="map-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Jana+Online+Service+Kakdwip" target="_blank" rel="noopener noreferrer">
+     📍 OPEN GOOGLE MAP
     </a>
-
+   </div>
   </section>
-
-
-  <!-- QR CODE -->
-
-  <section class="card qr-section">
-
-    <div class="card-title"
-         style="justify-content:center">
-
-      <span>▦</span>
-      Scan & Contact
-
-    </div>
-
-
-    <div class="qr-box">
-
-      <div id="qrcode"></div>
-
-    </div>
-
-
-    <h3>Scan QR Code</h3>
-
-    <p>
-      QR Code Scan করে সহজেই আমাদের Contact Page খুলুন।
-    </p>
-
-
-    <button class="qr-btn"
-            onclick="downloadQR()">
-
-      ⬇ Download QR
-
-    </button>
-
-  </section>
-
-
-  <!-- OFFICE -->
 
   <section class="card">
+   <div class="card-heading"><div class="card-icon">🛟</div>Customer Support</div>
 
-    <div class="card-title">
-
-      <span>📍</span>
-      Office Location
-
+   <div class="contact-row">
+    <div class="contact-icon">💬</div>
+    <div class="contact-data">
+     <label>Contact Options</label>
+     <b>WhatsApp / Call / Email</b>
     </div>
+   </div>
 
-
-    <div class="office">
-
-      <h3>Jana Online Service (JOS)</h3>
-
-      <p>
-        Kakdwip, South 24 Pgs<br>
-        West Bengal - 743347<br>
-        India
-      </p>
-
-
-      <a
-        class="map-btn"
-        href="https://www.google.com/maps/search/?api=1&query=Jana+Online+Service+Kakdwip"
-        target="_blank">
-
-        📍 OPEN GOOGLE MAP
-
-      </a>
-
+   <div class="contact-row">
+    <div class="contact-icon">⚡</div>
+    <div class="contact-data">
+     <label>Quick Assistance</label>
+     <b>Contact Us for Support</b>
     </div>
+   </div>
 
+   <div class="contact-row">
+    <div class="contact-icon">🔐</div>
+    <div class="contact-data">
+     <label>Our Commitment</label>
+     <b>Helpful Digital Support</b>
+    </div>
+   </div>
   </section>
 
+ </div>
 
-  <!-- BUSINESS SUPPORT -->
+ <!-- SOCIAL MEDIA -->
+ <section class="social-area">
+  <div class="social-heading">
+   <div class="mini-title">STAY CONNECTED</div>
+   <h2>Find Us Online ✨</h2>
+   <p>আমাদের Social Media-তে যুক্ত থাকুন।<br>আপনার ভালোবাসা ও Support আমাদের অনুপ্রেরণা।</p>
+  </div>
 
-  <section class="card">
+  <div class="social-grid">
 
-    <div class="card-title">
-
-      <span>🛟</span>
-      Customer Support
-
+   <article class="social-card youtube-card">
+    <div class="social-top">
+     <div class="social-logo youtube-logo">▶</div>
+     <div class="social-name">
+      <h3>YouTube Channel</h3>
+      <span>INFO SUMAN JOS</span>
+     </div>
     </div>
 
-
-    <div class="info">
-
-      <div class="info-icon">🕐</div>
-
-      <div class="info-content">
-
-        <label>Service Availability</label>
-
-        <b>24 × 7 Online Support</b>
-
-      </div>
-
-    </div>
-
-
-    <div class="info">
-
-      <div class="info-icon">⚡</div>
-
-      <div class="info-content">
-
-        <label>Quick Response</label>
-
-        <b>WhatsApp / Call Support</b>
-
-      </div>
-
-    </div>
-
-
-    <div class="info">
-
-      <div class="info-icon">🔒</div>
-
-      <div class="info-content">
-
-        <label>Professional Service</label>
-
-        <b>Trusted Digital Service</b>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SHARE -->
-
-  <section class="card share-card full">
-
-    <div class="card-title"
-         style="justify-content:center">
-
-      <span>↗</span>
-      Share Our Contact
-
-    </div>
-
-    <p>
-      আপনার পরিচিতদের সাথে Jana Online Service-এর
-      Contact Page Share করুন।
+    <p class="social-description">
+     ❤️ Love Status, Sad Status, Shorts এবং আকর্ষণীয় ভিডিও দেখতে আমাদের YouTube Channel-এ Visit করুন।
     </p>
 
-    <button class="big-share"
-            onclick="sharePage()">
+    <a class="social-btn youtube-btn"
+       href="https://www.youtube.com/@infosumanjos"
+       target="_blank" rel="noopener noreferrer">
+     ▶ &nbsp; VISIT YOUTUBE
+    </a>
+   </article>
 
-      ↗ SHARE CONTACT PAGE
+   <article class="social-card facebook-card">
+    <div class="social-top">
+     <div class="social-logo facebook-logo">f</div>
+     <div class="social-name">
+      <h3>Facebook Page</h3>
+      <span>Connect With Our Page</span>
+     </div>
+    </div>
 
-    </button>
+    <p class="social-description">
+     💙 নতুন Post, Video এবং গুরুত্বপূর্ণ Update পেতে আমাদের Facebook Page Visit করুন ও Follow করুন।
+    </p>
 
-  </section>
+    <!-- YOUR_FACEBOOK_PAGE_LINK-এ নিজের Facebook Page URL বসান -->
+    <a class="social-btn facebook-btn"
+       href="https://www.facebook.com/share/1FmGnUowv5/"
+       target="_blank" rel="noopener noreferrer"
+       onclick="return checkFacebookLink(event)">
+     f &nbsp; VISIT FACEBOOK
+    </a>
+   </article>
 
+  </div>
+
+  <p class="social-note">💖 Thank you for being a part of our digital community!</p>
+ </section>
+
+ <section class="card qr-card">
+  <div class="card-heading" style="justify-content:center">
+   <div class="card-icon">▦</div>Scan &amp; Contact
+  </div>
+  <div class="qr-box"><div id="qrcode"></div></div>
+  <h3>Your Contact QR Code</h3>
+  <p>QR Code Scan করে সহজেই এই Contact Page খুলতে পারবেন।</p>
+  <button class="primary-btn" onclick="downloadQR()">⬇ DOWNLOAD QR CODE</button>
+ </section>
 
 </main>
 
-
-<footer>
-
-  <b>Jana Online Service (JOS)</b><br>
-
-  Professional Digital Service Center<br>
-
-  © 2026 All Rights Reserved
-
+<footer class="footer">
+ <div class="footer-logo">JOS</div>
+ <h3>Jana Online Service</h3>
+ <p>Digital Service · Online Support · Digital Solutions</p>
+ <div class="copyright">
+  © <span id="year"></span> Jana Online Service (JOS)<br>
+  All Rights Reserved.
+ </div>
 </footer>
 
-
-<div class="toast" id="toast">
-  Copied Successfully
-</div>
-
-
-<!-- QR LIBRARY -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-
 <script>
-
-/* ================= BACK ================= */
-
 function goBack(){
-
-  if(history.length > 1){
-
-    history.back();
-
-  }else{
-
-    location.href="index.html";
-
-  }
-
+ if(history.length>1) history.back();
+ else location.href="index.html";
 }
 
-
-/* ================= COPY ================= */
-
-function copyText(text){
-
-  navigator.clipboard.writeText(text)
-  .then(()=>{
-
-    showToast("✓ Copied Successfully");
-
-  })
-  .catch(()=>{
-
-    showToast(text);
-
-  });
-
-}
-
-
-/* ================= TOAST ================= */
-
+let toastTimer;
 function showToast(message){
-
-  const toast=document.getElementById("toast");
-
-  toast.innerText=message;
-
-  toast.classList.add("show");
-
-  setTimeout(()=>{
-
-    toast.classList.remove("show");
-
-  },2500);
-
+ const toast=document.getElementById("toast");
+ toast.textContent=message;
+ toast.classList.add("show");
+ clearTimeout(toastTimer);
+ toastTimer=setTimeout(()=>toast.classList.remove("show"),2600);
 }
 
-
-/* ================= SHARE ================= */
+async function copyText(text){
+ try{
+  if(navigator.clipboard && window.isSecureContext){
+   await navigator.clipboard.writeText(text);
+  }else{
+   const input=document.createElement("textarea");
+   input.value=text;
+   input.style.position="fixed";
+   input.style.opacity="0";
+   document.body.appendChild(input);
+   input.select();
+   const success=document.execCommand("copy");
+   input.remove();
+   if(!success) throw new Error("Copy failed");
+  }
+  showToast("✓ Copied Successfully");
+ }catch(error){
+  showToast("Copy করা যায়নি। নিজে কপি করুন: "+text);
+ }
+}
 
 async function sharePage(){
-
-  const data={
-    title:"Jana Online Service",
-    text:"Jana Online Service - Official Contact",
-    url:window.location.href
-  };
-
-  if(navigator.share){
-
-    try{
-
-      await navigator.share(data);
-
-    }catch(e){}
-
-  }else{
-
-    copyText(window.location.href);
-
+ const data={
+  title:"Jana Online Service",
+  text:"Jana Online Service - Official Contact Page",
+  url:location.href
+ };
+ if(navigator.share){
+  try{
+   await navigator.share(data);
+  }catch(error){
+   if(error.name!=="AbortError") await copyText(location.href);
   }
-
+ }else{
+  await copyText(location.href);
+ }
 }
 
+function checkFacebookLink(event){
+ if(event.currentTarget.getAttribute("href")==="YOUR_FACEBOOK_PAGE_LINK"){
+  event.preventDefault();
+  showToast("Facebook Page-এর আসল Link বসান।");
+  return false;
+ }
+ return true;
+}
 
-/* ================= QR ================= */
-
-/*
-  Page open হওয়ার পরে বর্তমান URL-এর QR তৈরি হবে।
-*/
-
-new QRCode(document.getElementById("qrcode"),{
-
-  text:window.location.href,
-
+function createQR(){
+ const box=document.getElementById("qrcode");
+ if(typeof QRCode==="undefined"){
+  box.textContent="QR তৈরি করতে Internet Connection প্রয়োজন।";
+  return;
+ }
+ box.innerHTML="";
+ new QRCode(box,{
+  text:location.href,
   width:190,
-
   height:190,
-
-  colorDark:"#062f3d",
-
+  colorDark:"#071b35",
   colorLight:"#ffffff",
-
   correctLevel:QRCode.CorrectLevel.H
-
-});
-
-
-/* ================= DOWNLOAD QR ================= */
+ });
+}
 
 function downloadQR(){
+ const box=document.getElementById("qrcode");
+ const canvas=box.querySelector("canvas");
+ const img=box.querySelector("img");
+ let url="";
 
-  const canvas=document.querySelector("#qrcode canvas");
+ if(canvas) url=canvas.toDataURL("image/png");
+ else if(img && img.src) url=img.src;
+ else{
+  showToast("QR তৈরি হচ্ছে। একটু পরে চেষ্টা করুন।");
+  return;
+ }
 
-  if(!canvas){
-
-    showToast("QR is loading...");
-
-    return;
-
-  }
-
-  const link=document.createElement("a");
-
-  link.download="Jana-Online-Service-QR.png";
-
-  link.href=canvas.toDataURL("image/png");
-
-  link.click();
-
-  showToast("✓ QR Downloaded");
-
+ const link=document.createElement("a");
+ link.download="Jana-Online-Service-QR.png";
+ link.href=url;
+ document.body.appendChild(link);
+ link.click();
+ link.remove();
+ showToast("✓ QR Download Started");
 }
 
+document.getElementById("year").textContent=new Date().getFullYear();
+createQR();
 </script>
 
+<script>
+(() => {
+  "use strict";
+
+  const canvas = document.getElementById("digital-network-bg");
+  const ctx = canvas.getContext("2d", { alpha: true });
+
+  if (!ctx) return;
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+
+  let width = 0;
+  let height = 0;
+  let particles = [];
+  let animationId = null;
+  let lastFrame = 0;
+  let time = 0;
+
+  const mouse = {
+    x: -1000,
+    y: -1000,
+    active: false
+  };
+
+  const colors = [
+    [39, 231, 239],  // Aqua
+    [0, 191, 166],   // Teal
+    [32, 227, 154],  // Green
+    [75, 166, 255]   // Blue
+  ];
+
+  function resizeCanvas() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+
+    width = window.innerWidth;
+    height = window.innerHeight;
+
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    // Keep particle count reasonable on mobile
+    const area = width * height;
+    const count = Math.max(
+      28,
+      Math.min(100, Math.floor(area / 12500))
+    );
+
+    particles = Array.from({ length: count }, createParticle);
+  }
+
+  function createParticle() {
+    const color = colors[
+      Math.floor(Math.random() * colors.length)
+    ];
+
+    return {
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.42,
+      vy: (Math.random() - 0.5) * 0.42,
+      radius: 1 + Math.random() * 1.8,
+      phase: Math.random() * Math.PI * 2,
+      color
+    };
+  }
+
+  function drawBackground() {
+    // Moving light fields create depth, not just a color change
+    const driftX = Math.sin(time * 0.00025) * width * 0.08;
+    const driftY = Math.cos(time * 0.0002) * height * 0.07;
+
+    const glow1 = ctx.createRadialGradient(
+      width * 0.18 + driftX,
+      height * 0.28 + driftY,
+      0,
+      width * 0.18 + driftX,
+      height * 0.28 + driftY,
+      Math.max(width, height) * 0.65
+    );
+
+    glow1.addColorStop(0, "rgba(0, 191, 166, 0.11)");
+    glow1.addColorStop(1, "rgba(0, 191, 166, 0)");
+
+    ctx.fillStyle = glow1;
+    ctx.fillRect(0, 0, width, height);
+
+    const glow2 = ctx.createRadialGradient(
+      width * 0.82 - driftX,
+      height * 0.72 - driftY,
+      0,
+      width * 0.82 - driftX,
+      height * 0.72 - driftY,
+      Math.max(width, height) * 0.55
+    );
+
+    glow2.addColorStop(0, "rgba(39, 130, 239, 0.09)");
+    glow2.addColorStop(1, "rgba(39, 130, 239, 0)");
+
+    ctx.fillStyle = glow2;
+    ctx.fillRect(0, 0, width, height);
+  }
+
+  function drawGrid() {
+    const spacing = 54;
+    const offsetX = (time * 0.006) % spacing;
+    const offsetY = (time * 0.003) % spacing;
+
+    ctx.save();
+    ctx.lineWidth = 0.5;
+    ctx.strokeStyle = "rgba(72, 199, 220, 0.055)";
+
+    for (let x = -spacing + offsetX; x < width; x += spacing) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, height);
+      ctx.stroke();
+    }
+
+    for (let y = -spacing + offsetY; y < height; y += spacing) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(width, y);
+      ctx.stroke();
+    }
+
+    ctx.restore();
+  }
+
+  function updateParticles() {
+    for (const p of particles) {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.phase += 0.018;
+
+      // Subtle organic motion
+      p.x += Math.sin(p.phase) * 0.12;
+      p.y += Math.cos(p.phase * 0.8) * 0.12;
+
+      // Mouse / touch interaction
+      if (mouse.active) {
+        const dx = p.x - mouse.x;
+        const dy = p.y - mouse.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < 115 && distance > 0) {
+          const force = (115 - distance) / 115 * 0.018;
+          p.x += dx * force;
+          p.y += dy * force;
+        }
+      }
+
+      // Wrap around screen edges
+      if (p.x < -10) p.x = width + 10;
+      if (p.x > width + 10) p.x = -10;
+      if (p.y < -10) p.y = height + 10;
+      if (p.y > height + 10) p.y = -10;
+    }
+  }
+
+  function drawConnections() {
+    const maxDistance = Math.min(145, width * 0.22);
+
+    for (let i = 0; i < particles.length; i++) {
+      const a = particles[i];
+
+      for (let j = i + 1; j < particles.length; j++) {
+        const b = particles[j];
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < maxDistance) {
+          const alpha = (1 - distance / maxDistance) * 0.42;
+
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+
+          ctx.strokeStyle =
+            "rgba(" + a.color.join(",") + "," + alpha + ")";
+
+          ctx.lineWidth = 0.7;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  function drawParticles() {
+    for (const p of particles) {
+      const pulse = 0.7 + Math.sin(p.phase) * 0.3;
+
+      ctx.beginPath();
+      ctx.arc(
+        p.x,
+        p.y,
+        p.radius * pulse,
+        0,
+        Math.PI * 2
+      );
+
+      ctx.fillStyle =
+        "rgba(" + p.color.join(",") + ",0.85)";
+
+      ctx.shadowBlur = 9;
+      ctx.shadowColor =
+        "rgba(" + p.color.join(",") + ",0.65)";
+
+      ctx.fill();
+    }
+
+    ctx.shadowBlur = 0;
+  }
+
+  function drawMouseGlow() {
+    if (!mouse.active) return;
+
+    const glow = ctx.createRadialGradient(
+      mouse.x, mouse.y, 0,
+      mouse.x, mouse.y, 130
+    );
+
+    glow.addColorStop(0, "rgba(39, 231, 239, 0.10)");
+    glow.addColorStop(1, "rgba(39, 231, 239, 0)");
+
+    ctx.fillStyle = glow;
+    ctx.fillRect(
+      mouse.x - 130,
+      mouse.y - 130,
+      260,
+      260
+    );
+  }
+
+  function render(timestamp) {
+    if (reducedMotion.matches) {
+      drawBackground();
+      drawGrid();
+      drawConnections();
+      drawParticles();
+      return;
+    }
+
+    // Limit animation to roughly 30 FPS for efficiency
+    if (timestamp - lastFrame < 32) {
+      animationId = requestAnimationFrame(render);
+      return;
+    }
+
+    lastFrame = timestamp;
+    time = timestamp;
+
+    ctx.clearRect(0, 0, width, height);
+
+    drawBackground();
+    drawGrid();
+    updateParticles();
+    drawConnections();
+    drawParticles();
+    drawMouseGlow();
+
+    animationId = requestAnimationFrame(render);
+  }
+
+  function startAnimation() {
+    if (animationId !== null) return;
+
+    animationId = requestAnimationFrame(render);
+  }
+
+  function stopAnimation() {
+    if (animationId !== null) {
+      cancelAnimationFrame(animationId);
+      animationId = null;
+    }
+  }
+
+  function updatePointer(event) {
+    mouse.x = event.clientX;
+    mouse.y = event.clientY;
+    mouse.active = true;
+  }
+
+  window.addEventListener("resize", resizeCanvas, {
+    passive: true
+  });
+
+  window.addEventListener("pointermove", updatePointer, {
+    passive: true
+  });
+
+  window.addEventListener("pointerdown", updatePointer, {
+    passive: true
+  });
+
+  window.addEventListener("pointerleave", () => {
+    mouse.active = false;
+  }, { passive: true });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAnimation();
+    } else {
+      startAnimation();
+    }
+  });
+
+  reducedMotion.addEventListener?.("change", () => {
+    stopAnimation();
+    startAnimation();
+  });
+
+  resizeCanvas();
+  startAnimation();
+})();
+</script>
 </body>
 </html>
